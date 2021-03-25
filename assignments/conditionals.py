@@ -40,9 +40,9 @@ while response == "yes":
 
     else:
          print("You were not born on any of the days")
+
     response = input("Do you want to check for another name? Answer yes/no. ")
     response = response.lower()
     while response != "yes" and response != "no":
-        re
-sponse = input("Do you want to check for another name? Answer yes/no. ")
-
+        response = input("Do you want to check for another name? Answer yes/no. ")
+        response = response.lower()
