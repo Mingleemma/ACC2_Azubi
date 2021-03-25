@@ -38,6 +38,9 @@ while response == "yes":
         elif userInput == "ama":
             print("You are a girl born on Saturday")
 
+
+            asasassds
+
     else:
         print("You were not born on any of the days")
     response = input("Do you want to check for another name? Answer yes/no. ")
