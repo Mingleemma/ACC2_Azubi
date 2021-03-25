@@ -1,1 +1,1 @@
-print("Hi!, Just checking how well this works")
+print("Hi!, Just checking how well works")
