@@ -8,24 +8,27 @@ logged = "se7en"
 
 # test for se7en
 while logged == "se7en":
-    answer = input(f"{question} {fincher_discog[0]}\n ")
-    answer = answer.lower()
-    if answer == "yes" or answer == "yeah":
+    answer1 = input(f"{question} {fincher_discog[0]}\n ")
+    answer1 = answer1.lower()
+    if answer1 == "yes" or answer1 == "yeah":
         print("taste!")
     else:
         print("do better")
 
-    fight_club = input(f"{follow_up} {fincher_discog[1]} ")
-    logged = fight_club
-    logged = logged.lower()
-    while logged == fight_club:
+
+    logged = "fight_club"
+    answer2 = input(f"{follow_up} {fincher_discog[1]} ")
+    answer2 = answer2.lower()
+    while logged == "fight_club" and logged != "no":
         if logged == "yes" or logged == "yeah":
             print("you live in a society")
 
         elif logged == "no":
-            print("do the needful")
+            print("pattern up")
 
         else:
             print("you should join a fight club")
 
         logged = "end"
+
+        print("bye")

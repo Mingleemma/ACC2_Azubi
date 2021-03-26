@@ -1,6 +1,6 @@
 response = "yes"
 while response == "yes":
-    userInput = input("what is your name?\n ")
+    userInput = input("what is your day born name?\n ")
     userInput = userInput.lower()
     if userInput == "kojo" or userInput == "adwoa":
         if userInput == "kojo":
