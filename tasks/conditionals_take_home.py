@@ -18,8 +18,14 @@ while logged == "se7en":
     fight_club = input(f"{follow_up} {fincher_discog[1]} ")
     logged = fight_club
     logged = logged.lower()
-    while logged == fight_club and logged != "no":
+    while logged == fight_club:
         if logged == "yes" or logged == "yeah":
             print("you live in a society")
+
+        elif logged == "no":
+            print("do the needful")
+
         else:
             print("you should join a fight club")
+
+        logged = "end"
