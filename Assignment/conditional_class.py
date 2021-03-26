@@ -37,14 +37,10 @@ while response == "yes":
             print("You are a boy born on Saturday")
         elif userInput == "ama":
             print("You are a girl born on Saturday")
-
-
-            asasassds
-
     else:
         print("You were not born on any of the days")
     response = input("Do you want to check for another name? Answer yes/no. ")
     response = response.capitalize()
     while response != "yes" and response != "no":
-        sponse = input("Do you want to check for another name? Answer yes/no. ")
-
+        sponse = input(
+            "Do you want to check for another name? Answer yes/no. ")
