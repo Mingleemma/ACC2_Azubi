@@ -1,7 +1,7 @@
 # # input would be radius
 # # area = pi * r(2)
-# import math
-# pi = float(math.pi())
+import math
+# pi = math.floor(3.67)
 
 def able():
     print('Hello this is Able')
@@ -9,7 +9,5 @@ def able():
 def ability():
     return 'Hello this has ability'
 
-able = able()
-ability = ability()
-print(str(able) + ' I am working')
-print(ability + ' and it is working')
+def myonwnfloor(x):
+    return math.floor(x)
