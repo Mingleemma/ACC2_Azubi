@@ -5,4 +5,4 @@ def area(r):
   return math.pi * (r **2)
 
 result = area(radius)
-print(f'Area of circle is {result}')
+print(f'Area of circle is {result:.2f}')
