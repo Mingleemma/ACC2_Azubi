@@ -1,14 +1,13 @@
 # input radius
-# area = pi * raduis**2
+# area = pi * radius**2
 import math
+
 r = float(input("enter radius: "))
-def area_circle(r):
+
+
+def area_circle():
     a = math.pi * (r ** 2)
-    return a
-
-print(area_circle(r))
+    return round(a, 2)
 
 
-
-
-
+print(area_circle())
