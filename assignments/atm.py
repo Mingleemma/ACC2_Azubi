@@ -102,13 +102,6 @@ while isWorking:
 				else:
 					print('Wrong option selected!')	
 					isWorking = False
-
-		elif len(pin_number) < 4 or len(pin_number) > 4:
-			pin_attempts-=1
-			print('Wrong PIN number. PIN number should have a length of 4')
-			print(f'You have {pin_attempts} attempts remaining')
-			if pin_attempts == 0:
-				isWorking = False
 		else:
 			pin_attempts-=1
 			print('You entered the wrong pin number')
