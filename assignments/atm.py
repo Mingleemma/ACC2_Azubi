@@ -64,7 +64,7 @@ def withdraw(acc_type, currency):
 					print('Transaction successful!')
 					print()
 				again=input("Do you want to withdraw again? y/n: ").lower()
-				if again == 'n':
+				if again == 'n' or again == 'no':
 					with_attempt = 0
 					print("Goodbye")
 
@@ -72,10 +72,8 @@ def remaining_amount(name):
 	acc_gh = users[name]['balance'][0]['GHS']
 	acc_us = users[name]['balance'][0]['USD']
 	print(f'Welcome {name}')
-	print(f'You have {acc_gh} GHS in your cedi account')
-	print(f'You have {acc_us} USD in your dollar account')
-
-
+	print(f'You have {acc_gh} GHS in your cedi account and {acc_us} USD in your dollar account')
+	print()
 
 name = input("Please enter your name: ")
 while isWorking:
@@ -83,18 +81,20 @@ while isWorking:
 		print(f'Hi {name}. You do not have an account. Kindly consider creating an account. Thanks')
 		isWorking = False
 	else:
-		# pin_number = input('Enter PIN number: ')
 		pin_number = getpass.getpass(prompt='Enter PIN number: ')
 		if pin_number == users[name]['pin']:
 			print(f'Welcome {name}. What do you want to do?')
 			options = input('To withdraw money, press 1. To check balance, press 2: ')
+			print()
 			with_option = True
 			while with_option:
 				if options == '1':
 					print('Which account you want to withdraw from?')
 					account = int(input('Press 1 for cedi account or 2 for dollar account: '))
-					if account <= 0 and account >=3:
+					if account >=3:
 						print('Wrong option selected. Please select the correct one')
+						with_option = False
+						isWorking = False
 					else:
 						currency = account_type[0][1] if account == 1 else account_type[0][2]
 						withdraw(account, currency)
@@ -106,6 +106,7 @@ while isWorking:
 					isWorking = False
 				else:
 					print('Wrong option selected!')	
+					with_option = False
 					isWorking = False
 		else:
 			pin_attempts-=1
