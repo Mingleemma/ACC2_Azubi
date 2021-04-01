@@ -4,6 +4,7 @@ This would be our testing phase for all that we would be learning as pertains to
 
 # Task
 
+
 To be communicated by close of Friday.
 
 Python Task
