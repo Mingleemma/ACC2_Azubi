@@ -13,3 +13,6 @@ If the input is contained in the dictionary, the user is asked to input their pi
 
 The pin is then matched against the pin in the dictionary of username that was input. 
 User is logged in if the pin matches the username.
+
+**Check Balance**
+When the user enters one in the main menu, the user's balance is retrieved from the dictionary
