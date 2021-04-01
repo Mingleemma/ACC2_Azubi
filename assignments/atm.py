@@ -94,7 +94,7 @@ while isWorking:
 					if account >=3:
 						print('Wrong option selected. Please select the correct one')
 						with_option = False
-						isWorking = False
+						isWorking=False
 					else:
 						currency = account_type[0][1] if account == 1 else account_type[0][2]
 						withdraw(account, currency)
