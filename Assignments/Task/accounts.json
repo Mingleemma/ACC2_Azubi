@@ -1,0 +1,42 @@
+[
+    {
+        "username": "asiedu",
+        "pin": 1111,
+        "balance": {
+            "GHS": 17000.00,
+            "USD": 150000.00
+        }
+    },
+    {
+        "username": "ivan",
+        "pin": 2222,
+        "balance": {
+            "GHS": 17000.00,
+            "USD": 150000.00
+        }
+    },
+    {
+        "username": "makafui",
+        "pin": 3333,
+        "balance": {
+            "GHS": 17000.00,
+            "USD": 150000.00
+        }
+    },
+    {
+        "username": "akosua",
+        "pin": 4444,
+        "balance": {
+            "GHS": 17000.00,
+            "USD": 150000.00
+        }
+    },
+    {
+        "username": "hetty",
+        "pin": 5555,
+        "balance": {
+            "GHS": 17000.00,
+            "USD": 150000.00
+        }
+    }
+]
