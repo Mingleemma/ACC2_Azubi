@@ -1,3 +1,5 @@
+import getpass
+
 users = {
 	"Joshua": {
 		"pin": '0000',
@@ -61,9 +63,10 @@ def withdraw(acc_type, currency):
 				else:
 					print('Transaction successful!')
 					print()
-				again=input("Do you want to withdraw again? y/n: ")
+				again=input("Do you want to withdraw again? y/n: ").lower()
 				if again == 'n':
 					with_attempt = 0
+					print("Goodbye")
 
 def remaining_amount(name):
 	acc_gh = users[name]['balance'][0]['GHS']
@@ -80,7 +83,8 @@ while isWorking:
 		print(f'Hi {name}. You do not have an account. Kindly consider creating an account. Thanks')
 		isWorking = False
 	else:
-		pin_number = input('Enter PIN number: ')
+		# pin_number = input('Enter PIN number: ')
+		pin_number = getpass.getpass(prompt='Enter PIN number: ')
 		if pin_number == users[name]['pin']:
 			print(f'Welcome {name}. What do you want to do?')
 			options = input('To withdraw money, press 1. To check balance, press 2: ')
@@ -94,7 +98,8 @@ while isWorking:
 					else:
 						currency = account_type[0][1] if account == 1 else account_type[0][2]
 						withdraw(account, currency)
-					isWorking = False
+						isWorking = False
+						with_option = False
 				elif options == '2':
 					remaining_amount(name)
 					with_option = False
