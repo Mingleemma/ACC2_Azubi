@@ -23,7 +23,14 @@ def login():
 
         # prompt user to enter username and password
         username = input("Welcome, please enter your username: ")
-        pin = int(input("Please enter your PIN: "))
+        # we have a try exception so that a number is entered
+        while True:
+            try:
+                pin = int(input("Please enter your PIN: "))
+                break
+            except ValueError:
+                print("Oops!  That was no valid number.  Try again...")
+
 
         # this if block simply checks if the number of attempts have ran out so that it exits
         if(attempts == 0):
@@ -35,7 +42,6 @@ def login():
 
             # we check if the entered username exists in the dictionary
             if(username in userData[user].values()):
-
                 # if the username exists, we check if the pin corresponds to the entered username
                 if(pin == int(userData[user]["pin"])):
                     print("Logged in")
@@ -66,7 +72,12 @@ def startMenu():
     4) View your past transactions
     5) Exit
     """)
-    choice = int(input("Your option: "))
+    while True:
+        try:
+            choice = int(input("Your option: "))
+            break
+        except ValueError:
+            print("Oops!  That was no valid number.  Try again...")
     if(choice == 1):
         withdraw()
     elif(choice == 2):
