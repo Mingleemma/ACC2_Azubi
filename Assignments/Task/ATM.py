@@ -1,5 +1,5 @@
 # import the json library so we can pull data fron the json file with the user and account details
-import json
+import json, os, hashlib, binascii
 
 
 # function to update the json file with new account details after withdrawals
@@ -30,6 +30,13 @@ def withdraw_money(cur, amo):
         print(valerr)
 
 
+# function to hash pin
+def verify_password(password):
+    hpin = hashlib.sha512(password.encode()).hexdigest()
+
+    return hpin
+
+
 # start the program
 if __name__ == '__main__':
     # open the json file
@@ -44,9 +51,9 @@ if __name__ == '__main__':
             # loop through users to see if the name given by the user exists
             for user in users:
                 if username in user["username"]:
-                    pin = input("Please type your pin: \n")
-                    try:
-                        if int(pin) == user["pin"]:
+                    while True:
+                        pin = input("Please type your pin: \n")
+                        if verify_password(pin) == user["pin"]:
                             print("You have successfully logged in")
                             while True:
                                 action = input("1: Check Balance "
@@ -70,13 +77,11 @@ if __name__ == '__main__':
                                                 withdraw_money(denomination, amount)
                                                 break
                                             except ValueError:
-                                                print(valerr)
+                                                print(valerr + "\n1 for GHS\n2 for USD\n")
                                     elif int(action) == 3:
                                         break
                                 except ValueError:
                                     print(valerr)
                             break
                         else:
-                            print("Sorry, wrong password. Please retry. \n")
-                    except ValueError:
-                        print("The pin should be a 4 digit number")
+                            print("Sorry, wrong pin :(\nPlease retry. \n")
