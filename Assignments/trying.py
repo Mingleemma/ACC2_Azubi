@@ -1,0 +1,14 @@
+"Adjoa": "You were born on Monday",
+"Kojo": "You were born on Monday",
+"Abena": "You are born on Tuesday",
+"Kwabena": "You are born on Tuesday",
+"Akua": "You were born on Wednesday"
+"Kwaku": "You were born on Wednesday",
+"Yaw": "You were born on Thursday",
+"Yaa": "You were born on Thursday",
+"Afia": "You were born on Friday",
+"Kofi": "You were born on Friday",
+"Ama": "You were born on Saturday",
+"Kwame": "You were born on Saturday",
+"Akosua": "You were born on Sunday",
+"Kwesi": "You were born on Sunday"
