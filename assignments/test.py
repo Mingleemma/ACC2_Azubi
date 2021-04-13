@@ -6,11 +6,11 @@
 # print(area(8))
 
 # Area of a circle with math.pi
-import math
-def areaCircle(r):
-    a = math.pi * (r**2)
-    return a
-print(area(8))
+# import math
+# def areaCircle(r):
+#     a = math.pi * (r**2)
+#     return a
+# print(area(8))
 
 
 # The third approach
